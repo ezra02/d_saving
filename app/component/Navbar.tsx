@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
             <div className="xl:pl-10">
-              <Link href={"/"} className="text-xl font-semibold text-indigo-700">
+              <Link href={"/"} className="text-xl font-semibold text-slate-950">
                 Digital Saving
               </Link>
             </div>
@@ -42,8 +42,8 @@ const Navbar = () => {
                       href={item.href}
                       className={
                         pathname === item.href
-                          ? "text-indigo-700  font-bold uppercase"
-                          : "text-indigo-700 hover:text-indigo-500 hover:font-semibold ease-in-out duration-300 font-sans uppercase"
+                          ? "text-slate-700  font-bold uppercase"
+                          : "text-slate-700 hover:text-indigo-500 hover:font-semibold ease-in-out duration-300 font-sans uppercase"
                       }
                     >
                       {item.label}
@@ -53,11 +53,11 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="font-sans text-sm">
-              <div className="hidden lg:flex gap-4">
-              <button className="bg-indigo-600  hover:bg-white hover:text-indigo-600 lg:text-xl hover:border-indigo-600 ml-3 sm:ml-6 bg-transparent transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-indigo-700 focus:ring-white hover:bg-indigo-700-800 rounded border border-white text-white px-4 sm:px-8 py-1 sm:py-3 text-sm">
-              Sign up
-            </button>
-              </div>
+              <Link href={"/sign-up"} className="hidden lg:flex gap-4">
+                <button className=" border py-4 px-10 bg-indigo-700 text-white rounded-md font-bold text-md">
+                  Sign up
+                </button>
+              </Link>
               <button className="block lg:hidden" onClick={navHandle}>
                 {!nav ? (
                   <HiBars3 size={35} className="text-black" />
