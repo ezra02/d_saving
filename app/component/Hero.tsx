@@ -14,13 +14,13 @@ const heroContent = {
   text: {
     subheading: "Smart Savings, Brighter Tomorrows",
     heading: "Savings Made Simple One Click Away.",
-    desc: "At Wogen Holdings, diversity fuels our success. Across transportation, import-export, and education sectors, we champion innovation and unity.",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis blanditiis iusto incidunt perspiciatis, corporis velit saepe cumque soluta tempora quis dolor quidem maiores expedita non tempore, cum commodi harum mollitia. ",
   },
 };
 
 const Hero = () => {
   return (
-    <section className="md:mt-32 lg:pb-16 mt-20 md:py-8 md:px-10 max-sm:py-10 bg-white">
+    <section className="md:mt-32 lg:pb-16 mt-20 md:py-8 md:px-10 max-sm:py-10  bg-white">
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ const Hero = () => {
               <div className="flex max-md:flex-col md:space-x-3 text-center ">
                 <Link
                   href="/about"
-                  className="flex gap-2 items-center justify-center text-[16px] max-md:mb-3 py-3 px-10 max-md:text-lg  bg-indigo-700 text-slate-50 font-bold font-sans rounded-lg duration-300 transition-all ease-in-out hover:bg-indigo-300 border hover:border-sky-200 hover:shadow-lg relative top-0 hover:-top-1"
+                  className="flex gap-2 items-center justify-center text-[16px] max-md:mb-3 py-3 px-10 max-md:text-lg  bg-indigo-700 text-slate-50 font-bold font-sans rounded-lg duration-300 transition-all ease-in-out hover:bg-indigo-500 hover:shadow-lg relative top-0 hover:-top-1"
                 >
                   Learn more 
                   <span><HiArrowLongRight size={25}/></span>

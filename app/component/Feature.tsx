@@ -10,11 +10,11 @@ export default function Feature() {
     <div className="">
       <section className="mx-auto container py-20 ">
         <div className="flex justify-center items-center flex-col">
-          <div className="lg:text-6xl md:text-5xl text-4xl font-black leading-10 text-center text-gray-800 ">
+          <div className="lg:text-6xl md:text-5xl text-4xl font-black leading-10 text-center text-gray-800 z-30">
             <h1>Specially crafted features</h1>
           </div>
           <div className="pt-24 grid lg:grid-cols-3 md:grid-cols-2 justify-center items-center xl:gap-y-16 gap-y-20 gap-x-16 lg:gap-x-20 xl:gap-x-0 lg:px-10 xl:px-0">
-            <div className="rounded-2xl border-gray-200 p-4 py-8 flex flex-col mx-auto text-center hover:bg-gray-100 hover:scale-105 ease-in-out duration-300">
+            <div className="border-gray-200 p-4 py-8 flex flex-col mx-auto text-center hover:bg-gray-100 hover:scale-105 ease-in-out duration-300 border-r">
               <div className="mx-auto bg-indigo-700 p-5 text-white rounded-full">
                 <RiShieldLine  size={27}/>
               </div>
@@ -29,7 +29,7 @@ export default function Feature() {
               </p>
             </div>
 
-            <div className="rounded-2xl border-gray-200 p-4 py-8 flex flex-col mx-auto text-center hover:bg-gray-100 hover:scale-105 ease-in-out duration-300">
+            <div className="border-gray-200 p-4 py-8 flex flex-col mx-auto text-center hover:bg-gray-100 hover:scale-105 ease-in-out duration-300 border-r">
               <div className="mx-auto bg-indigo-700 p-5 text-white rounded-full">
                 <RiMoneyDollarCircleLine size={27} />
               </div>
@@ -44,7 +44,7 @@ export default function Feature() {
               </p>
             </div>
 
-            <div className="rounded-2xl border-gray-200 p-4 py-8 flex flex-col mx-auto text-center hover:bg-gray-100 hover:scale-105 ease-in-out duration-300">
+            <div className="border-gray-200 p-4 py-8 flex flex-col mx-auto text-center hover:bg-gray-100 hover:scale-105 ease-in-out duration-300">
               <div className="mx-auto bg-indigo-700 p-5 text-white rounded-full">
                 <RiMoneyDollarBoxLine size={27} />
               </div>
@@ -59,7 +59,7 @@ export default function Feature() {
               </p>
             </div>
 
-            <div className="rounded-2xl border-gray-200 p-4 py-8 flex flex-col mx-auto text-center hover:bg-gray-100 hover:scale-105 ease-in-out duration-300">
+            <div className="border-gray-200 p-4 py-8 flex flex-col mx-auto text-center hover:bg-gray-100 hover:scale-105 ease-in-out duration-300 border-r">
               <div className="mx-auto bg-indigo-700 p-5 text-white rounded-full">
                 <RiBankLine size={27} />
               </div>
@@ -74,7 +74,7 @@ export default function Feature() {
               </p>
             </div>
 
-            <div className="rounded-2xl border-gray-200 p-4 py-8 flex flex-col mx-auto text-center hover:bg-gray-100 hover:scale-105 ease-in-out duration-300">
+            <div className="border-gray-200 p-4 py-8 flex flex-col mx-auto text-center hover:bg-gray-100 hover:scale-105 ease-in-out duration-300 border-r">
               <div className="mx-auto bg-indigo-700 p-5 text-white rounded-full">
                 <RiBarChartGroupedLine size={27} />
               </div>
@@ -89,7 +89,7 @@ export default function Feature() {
               </p>
             </div>
 
-            <div className="rounded-2xl border-gray-200 p-4 py-8 flex flex-col mx-auto text-center hover:bg-gray-100 hover:scale-105 ease-in-out duration-300">
+            <div className="border-gray-200 p-4 py-8 flex flex-col mx-auto text-center hover:bg-gray-100 hover:scale-105 ease-in-out duration-300">
               <div className="mx-auto bg-indigo-700 p-5 text-white rounded-full">
                 <RiExchangeDollarLine size={27} />
               </div>

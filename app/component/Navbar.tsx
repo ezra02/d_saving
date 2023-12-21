@@ -46,9 +46,14 @@ const Navbar = () => {
                 ))}
               </ul>
             </div>
-            <div className="font-sans text-sm">
+            <div className="font-sans text-sm flex gap-2">
               <Link href={"/sign-up"} className="hidden lg:flex gap-4">
-                <button className=" border py-4 px-10 bg-indigo-700 text-white rounded-md font-bold text-md">
+                <button className=" border py-4 px-10 border-indigo-700 text-indigo-700 rounded-md font-bold text-md hover:text-indigo-500">
+                  Sign in
+                </button>
+              </Link>
+              <Link href={"/sign-up"} className="hidden lg:flex gap-4">
+                <button className=" border py-4 px-10 bg-indigo-700 text-white rounded-md font-bold text-md hover:bg-indigo-500">
                   Sign up
                 </button>
               </Link>
