@@ -1,17 +1,11 @@
 "use client";
-
+import { SiWebmoney } from "react-icons/si";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import { nav_links } from "@/constants";
 import { HiBars3 } from "react-icons/hi2";
-import {
-  FaFacebook,
-  FaLinkedin,
-  FaXTwitter,
-  FaTelegram,
-} from "react-icons/fa6";
 import { LiaTimesSolid } from "react-icons/lia";
 
 const Navbar = () => {
@@ -28,7 +22,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center">
             <div className="xl:pl-10">
               <Link href={"/"} className="text-xl font-semibold text-slate-950">
-                Digital Saving
+                <SiWebmoney size={40}  className="text-indigo-700"/>
               </Link>
             </div>
 
@@ -82,7 +76,7 @@ const Navbar = () => {
         <div className="flex items-center justify-center py-3">
           <Link href={"/"}>
             <Image
-              src={"/origin_logo.png"}
+              src={"/"}
               width={200}
               height={200}
               alt="Image"
