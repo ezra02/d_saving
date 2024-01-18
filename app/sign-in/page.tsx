@@ -1,18 +1,48 @@
+"use client"
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { RiUserAddLine, RiLockPasswordLine, RiMailLine } from "react-icons/ri";
 
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import Link from "next/link";
+import api from '../../lib/api'
 
-export default function Signup() {
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+export default function Signin() {
+  const [email,setEmail] = useState('')
+  const [password,setPassword] = useState('')
+
+  useEffect(()=>{
+    api.get('/sanctum/csrf-cookie')
+    .then(res=>{
+      console.log(getCookie('XSRF-TOKEN'))
+    })
+  },[])
+
+  const signIn = (e) => {
+    e.preventDefault()
+    const data ={email,password}
+    console.log(data);
+    api.post('/login',data)
+    .then(res=>{
+      console.log(res)
+    })
+    .catch(err=>{
+      
+    })
+  }
   return (
     <div className="flex gap-20 h-screen w-full">
       <div className="w-3/5 hidden sm:flex justify-center items-center bg-gradient-to-b from-violet-950 to-indigo-700">
         <Image src={"/login.png"} width={500} height={500} alt="Image"></Image>
       </div>
       <div className="bg-white flex flex-col justify-center h-screen w-full">
-        <form className="max-w-[450px] w-full mx-auto bg-gray-50 shadow-lg px-10 py-10 ">
+        <form onSubmit={()=>signIn(event)} className="max-w-[450px] w-full mx-auto bg-gray-50 shadow-lg px-10 py-10 ">
           <h2 className="text-4xl font-bold text-center py-6">
             Digital Saving
           </h2>
@@ -21,14 +51,14 @@ export default function Signup() {
             <label>
               <RiMailLine className="inline-block mr-2" /> Email
             </label>
-            <input className="border p-2" type="email" />
+            <input onChange={(e)=>{setEmail(e.target.value)}} className="border p-2" type="email" />
           </div>
 
           <div className="flex flex-col py-2">
             <label>
               <RiLockPasswordLine className="inline-block mr-2" /> Password
             </label>
-            <input className="border p-2" type="password" />
+            <input onChange={(e)=>{setPassword(e.target.value)}} className="border p-2" type="password" />
           </div>
 
           <button className="border w-full my-5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white">
